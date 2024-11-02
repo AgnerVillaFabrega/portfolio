@@ -1,0 +1,269 @@
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 
+        auto 1fr auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Inter Prevent Layout Shift, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ?Menu */
+/* ?Estilos del header y menú */
+.logo {
+    width: 75px;
+    /* Ajusta según sea necesario */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px #433631);
+    /* Sombra suave */
+}
+
+header {
+    display: flex;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+header a img {
+    height: 30px;
+    margin-right: 1rem;
+}
+
+/* Estilos del menú en pantalla grande */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+header nav ul li a:hover {
+    color: #ff5714;
+    transition: color 0.3s;
+}
+
+/* ?Menú hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+/* ?Estilos del menú hamburguesa cuando se activa */
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f7f7f7;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu.active li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.menu.active li a {
+    color: #d94f04;
+    font-size: 1.3em;
+}
+
+/* ? Animación de menú hamburguesa al activarse */
+.menu.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ? Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 1.5rem;
+        font-size: 1.2em;
+        text-align: center;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li a:hover {
+        background-color: #ff5714;
+        color: white;
+    }
+}
+
+
+
+
+/* ?Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer .highlight {
+    font-weight: bold;
+    color: #7e5bca;
+    /* Puedes cambiar el color que prefieras */
+}
+
+/* ?Social media */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Centra los iconos horizontalmente */
+}
+
+.social-icons li {
+    margin: 0 10px;
+    /* Espacio entre los iconos */
+}
+
+.social-icons a {
+    color: #333;
+    /* Color de los iconos */
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+/* ?Espacio par CSS de Formulario */
+/* Contact section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Inter, Inter Prevent Layout Shift, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    
+}
+
+.contact-info {
+    width: 35%;
+    background-color: #3d3e3e;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 8px; /* Aplica un borde redondeado a los campos */
+
+}
+
+.form-container {
+    width: 55%;
+    background-color: #c5c5c5;
+    padding: 2rem;
+    border-radius: 8px; /* Aplica un borde redondeado a los campos */
+
+}
+
+h3 {
+    margin-bottom: 1rem;
+    color: #e17c2b;
+    font-family: inherit; /* Asegura que el título también tenga la fuente */
+}
+form label, form input, form textarea, form button {
+    font-family: inherit; /* Asegura que todos los elementos del formulario hereden la fuente */
+}
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-radius: 8px; /* Aplica un borde redondeado a los campos */
+
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #d94f04;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #f6ad72;
+}

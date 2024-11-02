@@ -1,0 +1,467 @@
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 
+        auto 1fr auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Inter Prevent Layout Shift, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ?Menu */
+/* ?Estilos del header y menú */
+.logo {
+    width: 75px;
+    /* Ajusta según sea necesario */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px #433631);
+    /* Sombra suave */
+}
+
+header {
+    display: flex;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+header a img {
+    height: 30px;
+    margin-right: 1rem;
+}
+
+/* Estilos del menú en pantalla grande */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+header nav ul li a:hover {
+    color: #ff5714;
+    transition: color 0.3s;
+}
+
+/* ?Menú hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+/* ?Estilos del menú hamburguesa cuando se activa */
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f7f7f7;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu.active li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.menu.active li a {
+    color: #d94f04;
+    font-size: 1.3em;
+}
+
+/* ? Animación de menú hamburguesa al activarse */
+.menu.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ? Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 1.5rem;
+        font-size: 1.2em;
+        text-align: center;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li a:hover {
+        background-color: #ff5714;
+        color: white;
+    }
+}
+
+/* ? Imagenes responsivas */
+.about-image,
+.resource-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*? resources-section */
+/* Contenedor principal - mantiene el layout en filas y distribuye bien los elementos */
+.resources-section {
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado adecuado entre los elementos */
+    flex-wrap: wrap;
+    /* Para que los elementos se ajusten en varias filas si es necesario */
+    padding: 2em;
+    background-color: #f7f7f7;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #d94f04;
+    font-weight: bold;
+}
+
+/* Estilos para cada contenedor de recurso */
+.resource-container {
+    width: 30%;
+    /* Ajusta el ancho para que entren 3 por fila */
+    margin-bottom: 2em;
+    /* Añade un margen entre las filas */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.resource-container:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro del contenedor */
+.resource-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido del recurso */
+.resource-content {
+    padding: 1.5em;
+}
+
+/* Ajustes para título */
+.resource-content h3 {
+    font-size: 1.5em;
+    color: #d94f04;
+    margin-bottom: 1em;
+}
+
+/* Ajustes para texto */
+.resource-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* Estilo para el enlace */
+.resource-link {
+    color: #d94f04;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #ff5714;
+}
+
+/* Responsive: para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .resource-container {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+}
+
+
+/* ? About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    background-color: #fff;
+}
+
+/* Contenedor que agrupa la imagen y el texto */
+.about-container {
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan cuando el ancho es pequeño */
+}
+
+/* Estilo para la imagen */
+.about-image {
+    width: 45%;
+    border-radius: 8px;
+    margin-right: 2em;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del texto */
+.about-text {
+    width: 50%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos para el título */
+.about-text h2 {
+    font-size: 2.5em;
+    color: #d94f04;
+    margin-bottom: 1em;
+}
+
+/* Párrafos de texto */
+.about-text p {
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+}
+
+/* Negrita personalizada en el texto */
+.about-text strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para pantallas más pequeñas, como móviles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        /* Cambia la orientación a vertical */
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        /* Imagen ocupa todo el ancho del contenedor */
+        margin-right: 0;
+        /* Remueve el margen derecho */
+        margin-bottom: 2em;
+        /* Añade espacio debajo de la imagen */
+    }
+
+    .about-text {
+        width: 100%;
+        /* Texto ocupa todo el ancho debajo de la imagen */
+    }
+
+    /* Ajustar el tamaño del título y párrafos en pantallas pequeñas */
+    .about-text h2 {
+        font-size: 2em;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+}
+
+
+/* ?Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer .highlight {
+    font-weight: bold;
+    color: #7e5bca;
+    /* Puedes cambiar el color que prefieras */
+}
+
+/* ?Social media */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Centra los iconos horizontalmente */
+}
+
+.social-icons li {
+    margin: 0 10px;
+    /* Espacio entre los iconos */
+}
+
+.social-icons a {
+    color: #333;
+    /* Color de los iconos */
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+/* ? Frase motivacional */
+.frase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.frase-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Estructura de contenido dentro de la tarjeta */
+.frase-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.frase-texto {
+    flex: 1;
+    text-align: center;
+}
+
+.frase-texto h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.frase-texto p {
+    font-size: 18px;
+    color: #555;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+#btn-generar {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-generar:hover {
+    background-color: #e64a19;
+}
+
+/* Estilos de imagen */
+.frase-imagen img {
+    width: 230px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .frase-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frase-imagen img {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 120px;
+    }
+}
