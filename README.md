@@ -1,28 +1,27 @@
-# Personal Portfolio
+# 👨🏻‍💻 Porfolio para programadores y desarrolladores
 
-Welcome to my personal portfolio! 🌐✨ This project showcases my skills and work, providing a glimpse of my journey as a developer. Initially built using **HTML**, **CSS**, and **JavaScript**, it serves as a foundation for continuous improvement. As I learn new technologies, I will enhance and expand this portfolio to reflect my growing expertise.
+<div align="center">
+<a href="https://porfolio.dev/">
+<img src="./public/porfolio.webp">
+</a>
+<p></p>
+</div>
 
-## 🚀 Current Version
+<div align="center">
 
-The initial version is developed using:
+![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![GitHub stars](https://img.shields.io/github/stars/midudev/porfolio.dev)
+![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/porfolio.dev)
+![GitHub forks](https://img.shields.io/github/forks/midudev/porfolio.dev)
+![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://en.wikipedia.org/wiki/HTML5)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com/)
+</div>
 
-## 🌱 Future Technologies
+## 🫂 Contribuidores
 
-As I continue to learn and grow, I plan to improve my portfolio using the following technologies:
+<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
+</a>
 
-- **React**: For building dynamic and interactive user interfaces.
-- **Next.js**: To enhance performance and enable server-side rendering.
-- **TypeScript**: To add static typing and improve code maintainability.
-- **Tailwind CSS**: For a more efficient and customizable styling approach.
-- **Node.js**: To explore server-side development and backend integration.
-
-Stay tuned for updates as I implement new features and design improvements!
-
----
-
-Feel free to provide any feedback or suggestions. Thank you for visiting!
-
+<p></p>
