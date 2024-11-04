@@ -1,9 +1,26 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import NestJS from "./icons/NestJs.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Flutter from "./icons/Flutter.astro"
+import Python from "./icons/Python.astro"
+import Mongo from "./icons/Mongo.astro"
+import Aws from "./icons/Aws.astro"
+import Docker from "./icons/Docker.astro"
+import Firebase from "./icons/Firebase.astro"
+import Jenkins from "./icons/Jenkins.astro"
+import Kubernetes from "./icons/Kubernetes.astro"
+import Postman from "./icons/Postman.astro"
+import Cloudflare from "./icons/Cloudflare.astro"
+import Digitalocean from "./icons/Digitalocean.astro"
+import Bash from "./icons/Bash.astro"
+import MySQL from "./icons/MySQL.astro"
+import Nginx from "./icons/Nginx.astro"
+import FastAPI from "./icons/FastAPI.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,98 +33,151 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-
-  // FLUTTER: {
-  //   name: "Flutter",ww
-  //   class: "bg-[#02569B] text-white",
-  //   icon: FlutterIcon, // Asegúrate de importar el icono de Flutter
-  // },
-  // NEST: {
-  //   name: "NestJS",
-  //   class: "bg-[#E0234E] text-white",
-  //   icon: NestJSIcon, // Asegúrate de importar el icono de NestJS
-  // },
-  // PYTHON: {
-  //   name: "Python",
-  //   class: "bg-[#3776AB] text-white",
-  //   icon: PythonIcon, // Asegúrate de importar el icono de Python
-  // },
-  // MONGODB: {
-  //   name: "MongoDB",
-  //   class: "bg-[#47A248] text-white",
-  //   icon: MongoDBIcon, // Asegúrate de importar el icono de MongoDB
-  // },
-  // MYSQL: {
-  //   name: "MySQL",
-  //   class: "bg-[#4479A1] text-white",
-  //   icon: MySQLIcon, // Asegúrate de importar el icono de MySQL
-  // },
-  // GIT: {
-  //   name: "Git",
-  //   class: "bg-[#F05032] text-white",
-  //   icon: GitIcon, // Asegúrate de importar el icono de Git
-  // },
-  // AWS: {
-  //   name: "AWS",
-  //   class: "bg-[#232F3E] text-white",
-  //   icon: AWSIcon, // Asegúrate de importar el icono de AWS
-  // },
-
-  // DOCKER: {
-  //   name: "Docker",
-  //   class: "bg-[#2496ED] text-white",
-  //   icon: DockerIcon, // Asegúrate de importar el icono de Docker
-  // },
-  // KUBERNETES: {
-  //   name: "Kubernetes",
-  //   class: "bg-[#326CE5] text-white",
-  //   icon: KubernetesIcon, // Asegúrate de importar el icono de Kubernetes
-  // },
-
-  // JENKINS: {
-  //   name: "Jenkins",
-  //   class: "bg-[#FFFFFF] text-black",
-  //   icon: JenkinsIcon, // Asegúrate de importar el icono de Jenkins
-  // },
-  // GRAFANA: {
-  //   name: "Grafana",
-  //   class: "bg-[#F46800] text-white",
-  //   icon: GrafanaIcon, // Asegúrate de importar el icono de Grafana
-  // },
-  // FIREBASE: {
-  //   name: "Firebase",
-  //   class: "bg-[#FFCA28] text-black",
-  //   icon: FirebaseIcon, // Asegúrate de importar el icono de Firebase
-  // },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-[#4E1B1B] text-white",
+    icon: NestJS,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#FF5C00] text-white",
+    icon: AstroIcon,
+  },
+  GITHUB: {
+    name: "GitHub",
+    class: "bg-[#181717] text-white",
+    icon: GitHub,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-[#0D4D6C] text-white",
+    icon: Flutter,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#2B5B8D] text-white",
+    icon: Python,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#3B8A3D] text-white",
+    icon: Mongo,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#1E2530] text-white",
+    icon: Aws,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#007C92] text-white",
+    icon: Docker,
+  },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-[#2C4B75] text-white",
+    icon: Kubernetes,
+  },
+  JENKINS: {
+    name: "Jenkins",
+    class: "bg-[#DDDDDD] text-black",
+    icon: Jenkins,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#FFC107] text-black",
+    icon: Firebase,
+  },
+  POSTMAN: {
+    name: "Postman",
+    class: "bg-[#C0542A] text-white",
+    icon: Postman,
+  },
+  CLOUDFLARE: {
+    name: "Cloudflare",
+    class: "bg-[#D45D24] text-white",
+    icon: Cloudflare,
+  },
+  DIGITALOCEAN: {
+    name: "DigitalOcean",
+    class: "bg-[[#005B99] text-white", 
+    icon: Digitalocean, 
+  },
+  BASH: {
+    name: "Bash",
+    class: "bg-[#3C3C3C] text-white",
+    icon: Bash,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758F] text-white",
+    icon: MySQL, 
+  },
+  NGINX: {
+    name: "Nginx",
+    class: "bg-[#009639] text-white",
+    icon: Nginx, 
+  },
+  FASTAPI: {
+    name: "FastAPI",
+    class: "bg-[#009688]/75 text-white",
+    icon: FastAPI,
+  },
 }
 const PROJECTS = [
+  {
+    title: "Mixcosechas - Unidax",
+    description:
+    `
+      Desarrollo de un aplicativo móvil en Dart con Flutter para optimizar los tiempos 
+      de respuesta en informes de análisis de laboratorio para productores agropecuarios de 
+      UNIDAX. El aplicativo proporcionará una interfaz amigable que facilite el acceso a 
+      resultados de pruebas de suelo, agua y sistema foliar. Utilizando Firebase como base 
+      de datos, el sistema garantizará el almacenamiento eficiente y la sincronización en 
+      tiempo real, mejorando así la toma de decisiones y la productividad de los productores, 
+      incluso en áreas con conectividad limitada.
+      `,
+    link:"https://drive.google.com/drive/folders/1IexSOr-UsL1O18437CaFQh1RFLHCv6Vs?usp=drive_link",
+    github: "https://github.com/AgnerVillaFabrega/MixCosechas",
+    image: "/portfolio/projects/mixcosechas.webp",
+    tags: [TAGS.FLUTTER,TAGS.FIREBASE],
+  },
+  {
+    title: "GirosYa - Tiresia",
+    description:
+    `
+      GirosYa es un proyecto realizado con Tiresia que abarca 
+      una aplicación web completa (frontend, backend y una API desarrollada en Mojolicious).
+       Mi responsabilidad fue el despliegue de esta, donde implementé la dockerización de los componentes 
+       (frontend, backend y base de datos), incluyendo la configuración de réplicas para bases de datos 
+       productivas. También gestioné las configuraciones de DNS con Cloudflare, aseguré las comunicaciones 
+       con certificados SSL y optimicé el tráfico a través de Nginx, creando así un entorno robusto y escalable.
+       `,
+    link: "https://gyr.tiresia.com.co/", //URL del despliegue
+    image: "/portfolio/projects/girosya.webp",
+    tags: [TAGS.BASH,TAGS.DOCKER,TAGS.CLOUDFLARE,TAGS.NGINX], 
+  },
+  {
+    title: "DevOps - Cloud Practitioner",
+    description:
+    `
+      Proyectos dedicados a creacion de infraestructura cloud con diferentes proyectos 
+      con la finalidad de practicar las nuevas tecnologias  
+    `,
+    link: "https://drive.google.com/drive/folders/1WRdvrby5cAhiiGlWDr9JWBstARjicJ_A?usp=drive_link",
+    // github: "https://github.com/AgnerVillaFabrega/devops",
+    image: "/portfolio/projects/aws.webp",
+    tags: [TAGS.AWS,TAGS.DOCKER,TAGS.FASTAPI,TAGS.JENKINS],
+  },
   {
     title: "Portfolio personal",
     description:
       "Mi portafolio personal donde muestro mis proyectos destacados, habilidades y experiencia como desarrollador backend y DevOps. Incluye ejemplos de trabajos realizados con tecnologías y herramientas de infraestructura modernas.",
-    link: "https://agnervillafabrega.github.io/portfolio/", //URL del despliegue
-    github: "https://github.com/AgnerVillaFabrega/portfolio",//github repo
-    image: "/portfolio/projects/image.png",
-    tags: [TAGS.TAILWIND],
-    
+    link: "https://agnervillafabrega.github.io/portfolio/",
+    github: "https://github.com/AgnerVillaFabrega/portfolio",
+    image: "/portfolio/projects/portfolio.webp",
+    tags: [TAGS.ASTRO,TAGS.TAILWIND,TAGS.GITHUB], 
   },
-  // {
-  //   title: "SVGL - A beautiful library with SVG logos",
-  //   description:
-  //     "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-  //   link: "https://svgl.vercel.app/",
-  //   github: "https://github.com/pheralb/svgl",
-  //   image: "/projects/svgl.webp",
-  //   tags: [TAGS.NEXT, TAGS.TAILWIND],
-  // },
-  // {
-  //   title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-  //   description:
-  //     "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-  //   link: "https://adventjs.dev",
-  //   image: "/projects/adventjs.webp",
-  //   tags: [TAGS.NEXT, TAGS.TAILWIND],
-  // },
 ]
 ---
 
