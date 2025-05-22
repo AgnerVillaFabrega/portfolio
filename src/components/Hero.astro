@@ -5,6 +5,7 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
+import DownloadIcon from "./icons/DownloadIcon.astro"
 ---
 
 <div class="max-w-xl">
@@ -49,6 +50,12 @@ import GitHub from "./icons/GitHub.astro"
     <SocialPill href="mailto:agnerfabrega@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
+    </SocialPill>
+    
+    <!-- Nuevo botón para descargar CV -->
+    <SocialPill href="/cv-agner-05-2025.pdf" download="CV-Agner.pdf">
+      <DownloadIcon class="size-4" />
+      Descargar CV
     </SocialPill>
 
   </nav>
