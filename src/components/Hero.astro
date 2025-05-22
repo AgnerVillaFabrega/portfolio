@@ -1,11 +1,11 @@
 ---
-const personalImageAlt = "Agner Villa"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
-import GitHub from "./icons/GitHub.astro"
-import DownloadIcon from "./icons/DownloadIcon.astro"
+const personalImageAlt = "Agner Villa";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHub from "./icons/GitHub.astro";
+import DownloadIcon from "./icons/DownloadIcon.astro";
 ---
 
 <div class="max-w-xl">
@@ -41,7 +41,7 @@ import DownloadIcon from "./icons/DownloadIcon.astro"
       <GitHub class="size-4" />
       GitHub
     </SocialPill>
-    
+
     <SocialPill href="https://linkedin.com/in/agner-villa-fabrega-a27044222">
       <LinkedInIcon class="size-4" />
       LinkedIn
@@ -51,12 +51,15 @@ import DownloadIcon from "./icons/DownloadIcon.astro"
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
-    
+
     <!-- Nuevo botón para descargar CV -->
-    <SocialPill href="/cv-agner-05-2025.pdf" download="CV-Agner.pdf">
+     <!--  -->
+    <SocialPill
+      href="/portfolio/cv-agner-05-2025.pdf"
+      download="CV-Agner-Villa.pdf"
+    >
       <DownloadIcon class="size-4" />
       Descargar CV
     </SocialPill>
-
   </nav>
 </div>
