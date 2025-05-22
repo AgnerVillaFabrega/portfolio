@@ -1,26 +1,35 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import NestJS from "./icons/NestJs.astro"
-import AstroIcon from "./icons/AstroIcon.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import Flutter from "./icons/Flutter.astro"
-import Python from "./icons/Python.astro"
-import Mongo from "./icons/Mongo.astro"
-import Aws from "./icons/Aws.astro"
-import Docker from "./icons/Docker.astro"
-import Firebase from "./icons/Firebase.astro"
-import Jenkins from "./icons/Jenkins.astro"
-import Kubernetes from "./icons/Kubernetes.astro"
-import Postman from "./icons/Postman.astro"
-import Cloudflare from "./icons/Cloudflare.astro"
-import Digitalocean from "./icons/Digitalocean.astro"
-import Bash from "./icons/Bash.astro"
-import MySQL from "./icons/MySQL.astro"
-import Nginx from "./icons/Nginx.astro"
-import FastAPI from "./icons/FastAPI.astro"
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import NestJS from "./icons/NestJs.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Flutter from "./icons/Flutter.astro";
+import Python from "./icons/Python.astro";
+import Mongo from "./icons/Mongo.astro";
+import Aws from "./icons/Aws.astro";
+import Docker from "./icons/Docker.astro";
+import Firebase from "./icons/Firebase.astro";
+import Jenkins from "./icons/Jenkins.astro";
+import Kubernetes from "./icons/Kubernetes.astro";
+import Postman from "./icons/Postman.astro";
+import Cloudflare from "./icons/Cloudflare.astro";
+import Digitalocean from "./icons/Digitalocean.astro";
+import Bash from "./icons/Bash.astro";
+import MySQL from "./icons/MySQL.astro";
+import Nginx from "./icons/Nginx.astro";
+import FastAPI from "./icons/FastAPI.astro";
+import Sqlite from "./icons/Sqlite.astro";
+import PostgresSQL from "./icons/PostgresSQL.astro";
+import Typescript from "./icons/Typescript.astro";
+import Prisma from "./icons/Prisma.astro";
+import Nats from "./icons/Nats.astro";
+import Jwt from "./icons/Jwt.astro";
+import Gcp from "./icons/Gcp.astro";
+import Helm from "./icons/Helm.astro";
+import Stripe from "./icons/Stripe.astro";
 
 const TAGS = {
   NEXT: {
@@ -100,8 +109,8 @@ const TAGS = {
   },
   DIGITALOCEAN: {
     name: "DigitalOcean",
-    class: "bg-[[#005B99] text-white", 
-    icon: Digitalocean, 
+    class: "bg-[[#005B99] text-white",
+    icon: Digitalocean,
   },
   BASH: {
     name: "Bash",
@@ -111,63 +120,98 @@ const TAGS = {
   MYSQL: {
     name: "MySQL",
     class: "bg-[#00758F] text-white",
-    icon: MySQL, 
+    icon: MySQL,
   },
   NGINX: {
     name: "Nginx",
     class: "bg-[#009639] text-white",
-    icon: Nginx, 
+    icon: Nginx,
   },
   FASTAPI: {
     name: "FastAPI",
     class: "bg-[#009688]/75 text-white",
     icon: FastAPI,
   },
-}
+  SQLITE: {
+    name: "Sqlite",
+    class: "bg-[#044A64] text-white", // Fondo azul medio con texto celeste
+    icon: Sqlite,
+  },
+  POSTGRES: {
+    name: "Postgres",
+    class: "bg-[#336791] text-white", // Azul oficial de PostgreSQL
+    icon: PostgresSQL,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#3178C6] text-white", // Azul oficial de TypeScript
+    icon: Typescript,
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "bg-[#2D3748] text-white", // Gris oscuro del logo de Prisma
+    icon: Prisma,
+  },
+  NATS: {
+    name: "Nats",
+    class: "bg-[#375F8A] text-white", // Azul del logo de NATS
+    icon: Nats,
+  },
+  JWT: {
+    name: "JWT",
+    class: "bg-[#000000] text-white", // Negro del logo JWT
+    icon: Jwt,
+  },
+  GCP: {
+    name: "GCP",
+    class: "bg-[#DDDDDD] text-[#4285F4] border border-[#4285F4]", // Fondo blanco con texto azul Google
+    icon: Gcp,
+  },
+  HELM: {
+    name: "Helm",
+    class: "bg-[#326CE5] text-white", // Azul más claro para contraste
+    icon: Helm,
+  },
+};
 const PROJECTS = [
-  // {
-  //   title: "Mixcosechas - Unidax",
-  //   description:
-  //   `
-  //     Desarrollo de un aplicativo móvil en Dart con Flutter para optimizar los tiempos 
-  //     de respuesta en informes de análisis de laboratorio para productores agropecuarios de 
-  //     UNIDAX. El aplicativo proporcionará una interfaz amigable que facilite el acceso a 
-  //     resultados de pruebas de suelo, agua y sistema foliar. Utilizando Firebase como base 
-  //     de datos, el sistema garantizará el almacenamiento eficiente y la sincronización en 
-  //     tiempo real, mejorando así la toma de decisiones y la productividad de los productores, 
-  //     incluso en áreas con conectividad limitada.
-  //     `,
-  //   link:"https://drive.google.com/drive/folders/1IexSOr-UsL1O18437CaFQh1RFLHCv6Vs?usp=drive_link",
-  //   github: "https://github.com/AgnerVillaFabrega/MixCosechas",
-  //   image: "/portfolio/projects/mixcosechas.webp",
-  //   tags: [TAGS.FLUTTER,TAGS.FIREBASE],
-  // },
-  // {
-  //   title: "GirosYa - Tiresia",
-  //   description:
-  //   `
-  //     GirosYa es un proyecto realizado con Tiresia que abarca 
-  //     una aplicación web completa (frontend, backend y una API desarrollada en Mojolicious).
-  //      Mi responsabilidad fue el despliegue de esta, donde implementé la dockerización de los componentes 
-  //      (frontend, backend y base de datos), incluyendo la configuración de réplicas para bases de datos 
-  //      productivas. También gestioné las configuraciones de DNS con Cloudflare, aseguré las comunicaciones 
-  //      con certificados SSL y optimicé el tráfico a través de Nginx, creando así un entorno robusto y escalable.
-  //      `,
-  //   link: "https://gyr.tiresia.com.co/", //URL del despliegue
-  //   image: "/portfolio/projects/girosya.webp",
-  //   tags: [TAGS.BASH,TAGS.DOCKER,TAGS.CLOUDFLARE,TAGS.NGINX], 
-  // },
   {
     title: "DevOps - Cloud Practitioner",
-    description:
-    `
+    description: `
+      Arquitectura completa de microservicios para e-commerce desarrollada con NestJS. El sistema incluye gestión de productos, órdenes, pagos y autenticación, implementando patrones de comunicación asíncrona mediante NATS. Desplegado en Google Cloud usando Kubernetes con configuraciones de desarrollo y producción optimizadas. 
+    `,
+    link: "https://www.linkedin.com/posts/agner-villa-fabrega-a27044222_microservicios-devops-googlecloud-activity-7325659384162742272-krmN?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADfkBL8BTZI3k1DQ-53imfY_3funnampxw8",
+    github:
+      "https://github.com/Nest-Microservices-DevMalagan/products-launcher.git",
+    image: "/portfolio/projects/microservices.webp",
+    tags: [
+      // Tecnologias de desarrollo
+      TAGS.NESTJS,
+      // Autenticacion
+      TAGS.JWT,
+      // Bases de datos
+      TAGS.PRISMA,
+      TAGS.MONGODB,
+      TAGS.POSTGRES,
+      TAGS.SQLITE,
+      // Comunicacion entre ms
+      TAGS.NATS,
+      // Tecnologias de despliegue
+      TAGS.GCP,
+      TAGS.DOCKER,
+      TAGS.HELM,
+      TAGS.KUBERNETES,
+    ],
+  },
+  {
+    title: "DevOps - Cloud Practitioner",
+    description: `
       Proyectos dedicados a creacion de infraestructura cloud con diferentes proyectos 
       con la finalidad de practicar las nuevas tecnologias  
     `,
     link: "https://drive.google.com/drive/folders/1WRdvrby5cAhiiGlWDr9JWBstARjicJ_A?usp=drive_link",
     // github: "https://github.com/AgnerVillaFabrega/devops",
     image: "/portfolio/projects/aws.webp",
-    tags: [TAGS.AWS,TAGS.DOCKER,TAGS.FASTAPI,TAGS.JENKINS],
+    tags: [TAGS.AWS, TAGS.DOCKER, TAGS.FASTAPI, TAGS.JENKINS],
   },
   {
     title: "Portfolio personal",
@@ -176,61 +220,64 @@ const PROJECTS = [
     link: "https://agnervillafabrega.github.io/portfolio/",
     github: "https://github.com/AgnerVillaFabrega/portfolio",
     image: "/portfolio/projects/portfolio.webp",
-    tags: [TAGS.ASTRO,TAGS.TAILWIND,TAGS.GITHUB], 
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.GITHUB],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-wrap mb-2 gap-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
